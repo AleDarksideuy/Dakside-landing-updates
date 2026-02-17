@@ -18,7 +18,7 @@ const collaborators = [
       'Gobierno departamental que impulsa y apoya el desarrollo cultural, deportivo y comunitario en el territorio.',
   },
   {
-    name: 'Dirección de Cultura',
+    name: 'Dirección de Cultura - Intendencia de Soriano',
     image: '/collaborators/Mesa de trabajo 3 (1).png',
     description:
       'Organismo que impulsa y apoya el desarrollo cultural en el departamento.',
@@ -36,7 +36,7 @@ const collaborators = [
       'Espacio cultural dedicado a la promoción de actividades artísticas y comunitarias.',
   },
   {
-    name: 'Secretaría de Deporte',
+    name: 'Secretaría de Deporte - Intendencia de Soriano',
     image: '/collaborators/SECRETARIA DE DEPORTES.jpg',
     description:
       'Entidad que impulsa el desarrollo deportivo y la integración social a través del deporte.',
