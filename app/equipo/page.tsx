@@ -26,7 +26,7 @@ export default function EquipoPage() {
       >
         <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.45)]">
           <Image
-            src="/equipo/mesa de trabajo 3.png"
+            src="/equipo/darksideequipo.png"
             alt="Equipo DarkSideUy"
             fill
             className="object-cover"
