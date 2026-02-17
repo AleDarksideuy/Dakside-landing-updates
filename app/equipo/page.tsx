@@ -24,7 +24,7 @@ export default function EquipoPage() {
         transition={{ duration: 1 }}
         className="w-full max-w-5xl mb-12 px-2"
       >
-        <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden">
+        <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.45)]">
           <Image
             src="/equipo/darksideequipo.png"
             alt="Equipo DarkSideUy"
@@ -47,13 +47,16 @@ export default function EquipoPage() {
           Cada integrante aporta su mirada, experiencia y compromiso para construir proyectos sólidos que trascienden el escenario.
         </p>
 
-        <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-          El equipo está conformado por: <br className="hidden md:block" />
-          <span className="text-white font-semibold">
-            Marcos Dal'Broi (Director General), Anaí Mayor (Gestora Creativa y Audiovisual),<br/> 
-            Alejandro Camarano (Gestor en Comunicaciones) y Nicolás Pérez (Técnico en Sonido e Iluminación).
+        <p className="text-sm md:text-base text-gray-400 leading-relaxed text-center">
+          El equipo está conformado por:
+          <br className="hidden md:block" />
+          
+          <span className="block text-white font-semibold text-center mt-2">
+            Alejandro Camarano (Encargado de Comunicaciones) y Nicolás Pérez (Iluminacion y sonido), <br/> 
+            Anaí Mayor (Gestora Cultural) y Marcos Dal'Broi (Director Creativo).
           </span>
         </p>
+
       </motion.div>
 
       {/* Botón volver */}
@@ -65,6 +68,3 @@ export default function EquipoPage() {
     </main>
   )
 }
-
-
-
