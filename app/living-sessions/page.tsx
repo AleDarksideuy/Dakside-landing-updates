@@ -29,9 +29,9 @@ const livingSessions = [
   },
   {
     number: 5,
-    band: null,
-    youtubeUrl: null,
-    available: false,
+    band: 'Geraldine',
+    youtubeUrl: 'https://youtu.be/vnGfpCj3BGo?si=EUj_ej5d8TBrMNBu',
+    available: true,
   },
   {
     number: 6,
@@ -67,8 +67,8 @@ export default function LivingSessionsPage() {
               key={session.number}
               className="group border border-white/20 rounded-xl overflow-hidden flex flex-col justify-between hover:border-white transition"
             >
-              {/* Imagen (solo sesiones 1 a 4) */}
-              {session.number <= 4 && (
+              {/* Imagen (solo sesiones 1 a 5) */}
+              {session.number <= 5 && (
                 <div className="w-full h-40 overflow-hidden">
                   <img
                     src={`/A COLOR/LIVING SESSIONS CAPTURAS/${session.number}.png`}

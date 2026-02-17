@@ -6,16 +6,22 @@ import { motion } from 'framer-motion'
 
 const collaborators = [
   {
+    name: 'Fondo de Incentivo Cultural (FIC)',
+    image: '/collaborators/Mesa de trabajo 4.png',
+    description:
+      'Programa nacional perteneciente al Ministerio de Educación y Cultura (MEC) que financia proyectos culturales mediante aportes de empresas y apoyo del Estado.',
+  },
+  {
     name: 'Intendencia de Soriano',
-    image: '/collaborators/SORIANO FERTIL.jpg',
+    image: '/collaborators/Mesa de trabajo 5.png',
     description:
       'Gobierno departamental que impulsa y apoya el desarrollo cultural, deportivo y comunitario en el territorio.',
   },
   {
-    name: 'Fondo de Incentivo Cultural (FIC)',
-    image: '/collaborators/LOGO FIC BLANCO.png',
+    name: 'Dirección de Cultura',
+    image: '/collaborators/Mesa de trabajo 3 (1).png',
     description:
-      'Programa nacional perteneciente al Ministerio de Educación y Cultura (MEC) que financia proyectos culturales mediante aportes de empresas y apoyo del Estado.',
+      'Organismo que impulsa y apoya el desarrollo cultural en el departamento.',
   },
   {
     name: 'INJU',

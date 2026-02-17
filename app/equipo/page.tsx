@@ -11,7 +11,7 @@ export default function EquipoPage() {
       {/* Header */}
       <div className="max-w-4xl w-full text-center pt-32 md:pt-40 mb-12">
         <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
-          Equipo
+          Nuestro Equipo
         </h1>
 
         <div className="h-[2px] bg-white mt-6 mx-auto max-w-xl animate-growLine"></div>
@@ -26,7 +26,7 @@ export default function EquipoPage() {
       >
         <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.45)]">
           <Image
-            src="/equipo/darksideequipo.png"
+            src="/equipo/mesa de trabajo 3.png"
             alt="Equipo DarkSideUy"
             fill
             className="object-cover"
