@@ -82,6 +82,12 @@ export default function Hero() {
   const [openMagazine, setOpenMagazine] = useState(false);
   const [openTickets, setOpenTickets] = useState(false);
 
+  // 🔥 NUEVO SLIDER TEMPORADA (11 imágenes)
+   const seasonImages = Array.from({ length: 11 }, (_, i) => 
+    `/hero-images/c${i + 1}.jpg`
+  );
+  const [seasonIndex, setSeasonIndex] = useState(0);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -95,10 +101,19 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);
+
+  // 🔥 MÁS LENTO (12 segundos)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSeasonIndex((prev) => (prev + 1) % seasonImages.length);
+    }, 15000);
+
+    return () => clearInterval(timer);
+  }, [seasonImages.length]);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => setCurrent((prev) => (prev + 1) % slides.length),
@@ -184,20 +199,52 @@ export default function Hero() {
       {/* ENTRADAS */}
       <section className="bg-black text-white border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-20">
-          {/* CAMBIO: imagen primero en mobile, texto debajo */}
           <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
-            
-            {/* IMAGEN */}
-            <div className="w-full order-1">
-              <img
-                src="/hero-images/cronograma2026.jpeg"
-                alt="Temporada Teatro 2026"
-                className="rounded-xl shadow-2xl w-full object-cover"
-              />
+
+            {/* 🔥 SLIDER TEMPORADA */}
+            <div className="relative w-full overflow-hidden rounded-xl shadow-2xl">
+              <AnimatePresence mode='wait'  initial={false}>
+                <motion.img
+                    key={seasonIndex}
+                  src={seasonImages[seasonIndex]}
+                  alt="Temporada Teatro 2026"
+                  initial={{ x: '100%' }}
+                  animate={{ x: 0 }}
+                  exit={{ x: '-100%' }}
+                  transition={{ duration: 0.1, ease: 'easeInOut' }}
+                  className="w-full object-cover"
+                />
+              </AnimatePresence>
+
+              {/* Flechas */}
+              <div className="absolute inset-0 flex items-center justify-between px-4">
+                <button
+                  onClick={() =>
+                    setSeasonIndex(
+                      (prev) =>
+                        (prev - 1 + seasonImages.length) % seasonImages.length
+                    )
+                  }
+                  className="bg-black/50 text-white p-2 rounded-full"
+                >
+                  <FaArrowLeft size={18} />
+                </button>
+
+                <button
+                  onClick={() =>
+                    setSeasonIndex(
+                      (prev) => (prev + 1) % seasonImages.length
+                    )
+                  }
+                  className="bg-black/50 text-white p-2 rounded-full"
+                >
+                  <FaArrowRight size={18} />
+                </button>
+              </div>
             </div>
 
-            {/* TEXTO + BOTÓN */}
-            <div className="w-full order-2 md:order-none text-center md:text-left">
+            {/* TEXTO */}
+            <div className="w-full text-center md:text-left">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
                 Temporada 2026
               </h2>
